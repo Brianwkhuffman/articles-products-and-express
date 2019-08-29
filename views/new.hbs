@@ -1,0 +1,25 @@
+{{#if product}}
+<form action="/products" class="input" method="post" autocomplete="off">
+    Name:<br>
+    <input type="text" name='name'>
+    <br>Price:<br>
+    <input type="text" name='price'>
+    <br>Inventory:<br>
+    <input type="text" name='inventory'>
+    <br> <input type="submit" value='Submit'>
+
+</form>
+<a href="/products"><button class="products">Back to Products</button></a>
+{{else}}
+<form action="/articles" class="input" method="post" autocomplete="off">
+    Title:<br>
+    <input type="text" name='title'>
+    <br>Body:<br>
+    <input type="text" name='body'>
+    <br>Author:<br>
+    <input type="text" name='author'>
+    <br> <input type="submit" value='Submit'>
+
+</form>
+<a href="/articles"><button class="articles">Back to Articles</button></a>
+{{/if}}

@@ -1,0 +1,11 @@
+body{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+.page{
+    background-color: violet;
+}
+ul{
+    background-color: cornflowerblue;
+}
