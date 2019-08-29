@@ -1,0 +1,22 @@
+<div>
+    <h1>Edit Product: {{name}}</h1>
+    <form action="/products/{{id}}/edit?_method=put" method="post" autocomplete="off">
+        <input type="hidden" name='id' value='{{id}}'>
+        <input type="hidden" name='name' value='{{name}}'>
+        <br>Price:
+        <br><input type="text" name='price' value='{{price}}'>
+        <br>Inventory:
+        <br><input type="text" name='inventory' value='{{inventory}}'>
+        <br><button type="submit">Submit Changes</button>
+    </form>
+
+    <br>
+    <form action="/products/{{id}}?_method=delete" method='post'>
+        <input type="hidden" name='id' value={{id}}>
+        <input type="submit" value='Delete: {{name}}'>
+    </form>
+
+
+    <br><a href="/products"><button class="goBack">Back</button></a>
+</div>
+{{!-- <link rel="stylesheet" type='text/css' href="/../css/index.css"> --}}

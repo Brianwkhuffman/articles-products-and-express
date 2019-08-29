@@ -1,0 +1,27 @@
+{{#if product}}
+<h1>{{type}} Selection</h1>
+<div class="products">
+    <ul>
+        <li>
+            <h2>Name: {{name}}</h2>
+            <h3>Price: ${{price}}</h3>
+            <h3>Stock: {{inventory}}</h3>
+        </li>
+    </ul>
+    <a href="/products/{{id}}/edit"><button class="edit">Edit</button></a>
+</div>
+<a href="/products"><button class="goBack">Go Back</button></a>
+{{else}}
+<h1>{{type}} Selection</h1>
+<div class="articles">
+    <ul>
+        <li>
+            <h2>Title: {{title}}</h2>
+            <h3>Body: {{body}}</h3>
+            <h3>Author: {{author}}</h3>
+        </li>
+    </ul>
+    <a href="/articles/{{title}}/edit"><button class="edit">Edit</button></a>
+</div>
+<a href="/articles"><button class="goBack">Go Back</button></a>
+{{/if}}

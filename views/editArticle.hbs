@@ -1,0 +1,19 @@
+<div>
+    <h1>Edit Article: {{title}}</h1>
+    <form action="/articles/{{title}}/edit?_method=put" method="post" autocomplete="off">
+        <input type="hidden" name='title' value='{{title}}'>
+        <br>Body:
+        <br><input type="text" name='body' value='{{body}}'>
+        <br>Author:
+        <br><input type="text" name='author' value='{{author}}'>
+        <br><button type="submit">Submit Changes</button>
+    </form>
+
+    <br>
+    <form action="/articles/{{title}}?_method=Delete" method='post'>
+        <input type="hidden" name='title' value={{title}}>
+        <input type="submit" value='Delete: {{title}}'>
+    </form>
+
+    <br><a href="/articles"><button class="goBack">Back</button></a>
+</div>
